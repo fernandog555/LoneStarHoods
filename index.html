@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lone Star Hoods</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link type="text/css" rel="stylesheet" href="LoneStarStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="title">Lone <span id="highlightStar">Star</span> Hoods</h1>
+
+    <!--Navigation Bars-->
+    <div class="w3-container">
+        <div class="navigationLinks w3-bar">
+            <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-white" title="Return to main page">Home</a>
+            <a href="LSHServices.html" class="w3-bar-item w3-button w3-mobile w3-hover-white" title="Lone Star Hoods Services">Services</a>
+            <a href="LSHAppointments.html" class="w3-bar-item w3-button w3-mobile w3-hover-white" title="Make an appointment with Lone Star Hoods">Contact Us</a>
+            <a href="LSHAbout.html" class="w3-bar-item w3-button w3-mobile w3-hover-white" title="Learn more about Lone Star Hoods">About Us</a>
+            <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </a>
+        </div>
+        <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+            <a href="index.html" class="w3-bar-item w3-button custom-hover-color" title="Return to main page">Home</a>
+            <a href="LSHServices.html" class="w3-bar-item w3-button custom-hover-color" title="Lone Star Hoods Services">Services</a>
+            <a href="LSHAppointments.html" class="w3-bar-item w3-button custom-hover-color" title="Make an appointment with Lone Star Hoods">Contact Us</a>
+            <a href="LSHAbout.html" class="w3-bar-item w3-button custom-hover-color" title="Learn more about Lone Star Hoods">About Us</a>
+        </div>
+    </div>
+
+    <!-- Image and Overlay Content -->
+    <div class="imageDivBackground">
+        <div class="imageWrapper">
+            <img src="van.jpg" alt="The LSH Work Van">
+        </div>
+        <div class="elementOverlay" id="professionalCleaning">
+            <p>Professional Vent Hood Cleaning Service</p>
+        </div>
+        <div class="elementOverlay" id="mainDescription">
+            <p>Over 20 years of vent hood cleaning experience in DFW.</p>
+        </div>
+        <div class="buttonDiv">
+            <a href="tel:+000" class="contactButtons topButton">Call Now!</a>
+            <a href="mailto:000" class="contactButtons topButton">Email Now!</a>
+            <a href="LSHAppointments.html" class="contactButtons bottomButton">Contact Form</a>
+        </div>
+    </div>
+
+    <div id="descriptionPart1">
+        <p class="paragraphTitle">
+            Expert <span id="highlightStar">Cleaning</span>. Consistently <span id="highlightStar">Exceptional</span>.
+        </p>
+        <div class="separator"></div>
+        <img class="leftPicture" src="placeholder.png" alt="Placeholder Image">
+        <p class="paragraphText">
+            When it comes to the cleaning and upkeep of your
+            kitchen exhaust system, it's crucial to entrust 
+            the task to skilled and certified professionals.
+            Lone Star Hoods stands as the foremost authority 
+            in delivering commercial kitchen cleaning and 
+            preventive maintenance solutions. At Lone Star Hoods,
+            our primary goal is to ensure the 
+            utmost satisfaction of our valued customers with 
+            our services. Our team of proficient cleaners 
+            possesses extensive training and a wealth of 
+            experience within the industry. 
+        </p>
+    </div>
+
+    <!--Bottom Copyright Bar-->
+    <div class="bottomNavigationLinks">
+        <p id="mainTitle">&copy; 2023 Lone Star Hoods, LLC</p>
+    </div>
+
+    <!-- JavaScript for Toggle Function -->
+    <script>
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            var icon = document.querySelector('.w3-bar-item.w3-right'); // Target the right hamburger icon
+
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                icon.classList.add("change"); // Add class to animate the icon
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                icon.classList.remove("change"); // Remove class to revert the icon animation
+            }
+        }
+    </script>
+</body>
+</html>
