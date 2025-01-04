@@ -290,3 +290,12 @@ a.custom-hover-color:hover {
     background-color: #FF7200;
 }
 
+#headerLogo {
+    width: 400px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    padding: 20px; /* Add padding around the image */
+}
+
+
