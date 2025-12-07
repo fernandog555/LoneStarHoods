@@ -22,7 +22,7 @@ type ThemeToggleProps = {
 export default function ThemeToggle({ className }: ThemeToggleProps) {
   const [mode, setMode] = useState<ThemeChoice>("dark");
   const [hasOverride, setHasOverride] = useState(false);
-  const mediaRef = useRef<MediaQueryList>();
+  const mediaRef = useRef<MediaQueryList | undefined>(undefined);
   const overrideRef = useRef(false);
 
   useEffect(() => {
