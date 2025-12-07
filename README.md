@@ -16,6 +16,7 @@ Marketing site for Lone Star Hoods, a DFW-based commercial kitchen vent hood cle
 - `/services` – Core service list, service-area grid, and compliance callouts.
 - `/contact` – Client-side request form with instant feedback, plus operating details.
 - Shared `Header`/`Footer`, responsive layout, and photo assets for quick brand customization.
+- Header ships with a theme-aware wordmark plus a Light/Dark toggle (defaults to the OS theme, right-click to re-sync).
 
 ## Project Structure
 
@@ -29,6 +30,8 @@ app/
 components/
   Header.tsx
   Footer.tsx
+  Logo.tsx
+  ThemeToggle.tsx
 public/
   LoneStarHoodsLogo.png
   van.jpg
@@ -59,6 +62,8 @@ Visit `http://localhost:3000` to develop locally. Edit any file in `app/` or `co
 
 - Page-level styles live alongside their components (`page.module.css`).
 - `app/globals.css` defines CSS resets plus utility classes (`container`, `pill`, `btn`, etc.).
+- Color palette uses CSS custom properties with `prefers-color-scheme` to auto-switch between light and dark modes.
+- Users can override the system preference via the header toggle (Light ↔ Dark). Overrides persist in `localStorage`; right-click the toggle to return to system sync.
 - Brand imagery (logos, hero photos, icons) resides in `public/`. Swap these files to rebrand without touching code.
 
 ## Deployment

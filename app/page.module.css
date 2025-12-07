@@ -38,14 +38,16 @@
   padding: clamp(2.75rem, 6vw, 4.6rem);
   max-width: 640px;
   z-index: 1;
+  color: var(--hero-foreground);
 }
 
 .heroTitle {
   font-size: clamp(2.7rem, 4vw, 3.6rem);
+  color: var(--hero-foreground);
 }
 
 .heroLead {
-  color: var(--muted);
+  color: var(--hero-muted);
   font-size: 1.05rem;
   text-wrap: balance;
 }

@@ -29,7 +29,7 @@ export default function Home() {
             <Link href="/services" className="btn">
               View Our Services
             </Link>
-            <Link href="/contact" className="btn secondary">
+            <Link href="/contact" className="btn">
               Get in Touch
             </Link>
           </div>

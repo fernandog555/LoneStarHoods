@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -33,14 +34,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brand} aria-label="Lone Star Hoods home">
-          <Image
-            src="/LoneStarHoodsLogo.png"
-            alt="Lone Star Hoods"
-            width={200}
-            height={64}
-            priority
-            className={styles.logo}
-          />
+          <Logo />
         </Link>
 
         <button
@@ -72,6 +66,7 @@ export default function Header() {
               </Link>
             );
           })}
+          <ThemeToggle className={styles.themeToggle} />
           <Link
             href="/contact"
             className={`${styles.link} ${styles.cta}`}
