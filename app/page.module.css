@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  margin: 1.5rem auto 0;
+  max-width: 1150px;
+  min-height: clamp(420px, 60vw, 560px);
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  filter: saturate(1.05);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: clamp(2.75rem, 6vw, 4.6rem);
+  max-width: 640px;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: clamp(2.7rem, 4vw, 3.6rem);
+}
+
+.heroLead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  text-wrap: balance;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.story {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: clamp(2.5rem, 4vw, 4rem);
+}
+
+.storyImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.storyImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.storyContent {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.storyTitle {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.separator {
+  width: 64px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0.4rem 0 1rem;
+}
+
+.storyText {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin: 0.75rem auto 0;
+    border-radius: 18px;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+}

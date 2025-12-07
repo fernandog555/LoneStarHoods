@@ -1,0 +1,147 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  margin: 1.25rem auto;
+  max-width: 1150px;
+  min-height: clamp(360px, 50vw, 520px);
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  filter: saturate(1.05);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.55));
+}
+
+.heroContent {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  padding: clamp(2.5rem, 5vw, 4rem);
+  max-width: 720px;
+  z-index: 1;
+  gap: 0.6rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+}
+
+.heroLead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  text-wrap: balance;
+}
+
+.heroPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 114, 0, 0.14);
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(255, 114, 0, 0.2);
+}
+
+.heroMeta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.4rem;
+}
+
+.metaCard {
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: grid;
+  gap: 0.2rem;
+}
+
+.metaNumber {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.metaLabel {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(2.25rem, 3vw, 3rem);
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.sectionHeading {
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  margin: 0;
+}
+
+.lead {
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.body {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.separator {
+  width: 70px;
+  height: 3px;
+  background: var(--accent);
+}
+
+.highlight {
+  color: var(--accent);
+}
